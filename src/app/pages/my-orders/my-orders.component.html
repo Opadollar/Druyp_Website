@@ -1,0 +1,173 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<div class="profile-banner">
+    <div class="container py-5 relative">
+        <div class="row profile-head">
+            <div class="col-4">
+                <h4 class="content-subheading text-capitalize text-white mb-0">My Account</h4>
+            </div>
+            <div class="col-8">
+                <h4 class="content-subheading text-capitalize text-white text-right mb-0">Add new request</h4>
+            </div>
+        </div>
+
+        <div class="profile-section mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-options p-4">
+                        <div class="profile-image">
+                            <img src="assets/images/pictures/profile_1.jpg" class="img-fluid">
+                            <input type="file" class="chnageprofile" hidden id="userPofilepic"
+                                (change)="getProfilePic($event);">
+                            <button type="button" class="editprofile" data-file="userPofilepic"
+                                (click)="triggerFileInput($event)"><img src="assets/images/icons/pencil_white.png"
+                                    class="img-fluid" data-file="userPofilepic"></button>
+                        </div>
+                        <ul class="options mt-5 mb-3">
+                            <li><a routerLink="/furniture-profile" class="d-flex align-items-center"><span
+                                        class="userico mr-3"></span> Profile</a></li>
+                            <!-- <li><a routerLink="/property" class="d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> My Property</a></li> -->
+                            <li><a routerLink="/my-orders" class="active d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> My Order</a></li>
+                            <li><a routerLink="/add-furniture" class="d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> Add Furniture</a></li>
+                            <li><a routerLink="" class="d-flex align-items-center"><span class="logoutico mr-3"></span>
+                                    Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <div class="profile-details">
+                        <ul class="nav nav-tabs property-tabs p-4 border-0 align-items-center" id="myTab"
+                            role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="received_orders" data-toggle="tab" href="#recivedOrders"
+                                    role="tab" aria-controls="home" aria-selected="true">Received</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="completed_orders" data-toggle="tab" href="#compltedOrders" role="tab"
+                                    aria-controls="profile" aria-selected="false">Completed</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cancelled_orders" data-toggle="tab" href="#cancelledOrders"
+                                    role="tab" aria-controls="contact" aria-selected="false">Cancelled</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-5 properties-wrp" id="myTabContent">
+                            <div class="tab-pane fade show active" id="recivedOrders" role="tabpanel"
+                                aria-labelledby="booked_prp">
+                                <!-- Booked property boxes -->
+                                <div class="property-showbox">
+                                    <a routerLink="/received-order-detail">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3"> 
+                                                <div class="property-image p-2 pink_box">
+                                                    <img src="assets/images/products/img_sofa3.png" class="img-fluid d-block mx-auto">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4 d-flex flex-column justify-content-center">
+                                                    <h5 class="box-title mb-0 brand-color">Order #1121237</h5>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+                                <div class="property-showbox">
+                                    <a routerLink="/received-order-detail">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image p-2 pink_box">
+                                                    <img src="assets/images/products/img_sofa2.png" class="img-fluid d-block mx-auto">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4 d-flex flex-column justify-content-center">
+                                                    <h5 class="box-title mb-0 brand-color">Order #1121237</h5>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box Close -->
+                                
+                            </div>
+                            <div class="tab-pane fade" id="compltedOrders" role="tabpanel" aria-labelledby="my_prop">
+                                <!-- Booked property boxes -->
+                                <!-- Box close -->
+                                <div class="property-showbox">
+                                    <a routerLink="/completed-order-detail">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image p-2 pink_box">
+                                                    <img src="assets/images/products/img_sofa2.png" class="img-fluid d-block mx-auto">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4 d-flex flex-column justify-content-center">
+                                                    <h5 class="box-title mb-0 brand-color">Order #1121237</h5>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box Close -->
+                                <div class="property-showbox">
+                                    <a routerLink="/completed-order-detail">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image p-2 pink_box">
+                                                    <img src="assets/images/products/img_sofa3.png" class="img-fluid d-block mx-auto">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4 d-flex flex-column justify-content-center">
+                                                    <h5 class="box-title mb-0 brand-color">Order #1121237</h5>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+                            </div>
+                            <div class="tab-pane fade" id="cancelledOrders" role="tabpanel"
+                                aria-labelledby="cancelled_prop">
+                                <!-- Booked property boxes -->
+                                <div class="property-showbox">
+                                    <a routerLink="/cancelled-order-detail">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image p-2 pink_box">
+                                                    <img src="assets/images/products/img_sofa3.png" class="img-fluid d-block mx-auto">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4 d-flex flex-column justify-content-center">
+                                                    <h5 class="box-title mb-0 brand-color">Order #1121237</h5>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>  
+                                <!-- Box close -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

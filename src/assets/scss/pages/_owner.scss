@@ -1,0 +1,60 @@
+.list-new-property{
+    .btn-brandcolor{
+        width: 60%;
+        @include responsivemax(575.9){
+            width: 100%;
+        }
+    }
+}
+
+.listproperty-banner{
+    &::before{
+        height: 224px;
+    }
+    .list-new-property{
+        .details {
+            @include border-radius-bottomside(0);
+        }
+    }
+}
+
+.property-type{
+    border: 1px solid $brandlight;
+    @include border-radius($primaryradius);
+}
+
+.renterdetails{
+    .imgcircle{
+        @include circle(50);
+        @include flexcenter;
+        overflow: hidden;
+        background: $brandlight;
+    }
+    .details{
+        max-width: 80%;
+    }
+}
+
+// -------------
+
+.property-features-sec{
+    .footbtns{
+        .btn{
+            width: 40%;
+            @include responsivemax(575.9){
+                width: 48%;
+            }
+        }
+        a.btn{
+            @include responsivemax(575.9){
+                width: 100%;
+            }
+        }
+    }
+}
+
+.profile-section{
+    .servicebox {
+        margin-bottom: 20px;
+    }
+}

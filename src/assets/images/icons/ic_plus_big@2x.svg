@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_plus_big@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M348.807732,125.192268 C349.884708,126.269244 351.635485,126.269244 352.712461,125.192268 L368,109.904729 L383.287539,125.192268 C384.364515,126.269244 386.115292,126.269244 387.192268,125.192268 C388.269244,124.115292 388.269244,122.364515 387.192268,121.287539 L371.904729,106 L387.192268,90.7124612 C388.269244,89.635485 388.269244,87.8847083 387.192268,86.8077321 C386.115292,85.730756 384.364515,85.730756 383.287539,86.8077321 L368,102.095271 L352.712461,86.8077321 C351.635485,85.730756 349.884708,85.730756 348.807732,86.8077321 C347.730756,87.8847083 347.730756,89.635485 348.807732,90.7124612 L364.095271,106 L348.807732,121.287539 C347.730756,122.364515 347.730756,124.115292 348.807732,125.192268 Z" id="path-1"></path>
+    </defs>
+    <g id="Website-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="17.2-list-new-property-O" transform="translate(-855.000000, -1864.000000)">
+            <g id="upload-pictures" transform="translate(515.000000, 1786.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="ic_plus_big" fill="#00A7F7" transform="translate(368.000000, 106.000000) rotate(-315.000000) translate(-368.000000, -106.000000) " xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

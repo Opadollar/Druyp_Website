@@ -1,0 +1,169 @@
+button{
+    font-family: $primaryfont;
+    &:focus,&:active{
+        box-shadow: none;
+        outline: 0;
+    }
+}
+
+.btn-default {
+    height: 65px;
+    border-radius: 5px;
+    @include transition(0.4s, ease-in-out);
+    min-width: 120px;
+    font-size: 1.3rem;
+    @include box-shadow($shadowlight);
+    @include responsivemax(350){
+        min-width: 135px;
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.btn-brandcolor{
+    @extend .btn-default;
+    background: $brandcolor;
+    color: $white;
+    font-weight: 500;
+    border: 1px solid $brandcolor;
+    @include box-shadow($shadowlight);
+    &:hover {
+        background: $brandcolor;
+        border: 1px solid $brandcolor;
+        color: $white;
+    }
+}
+
+.btn-brandlight{
+    @extend .btn-default;
+    background: $brandmorelight;
+    color: $branddark;
+    font-weight: 500;
+    border: 1px solid $brandmorelight;
+    &:hover {
+        background: $brandmorelight;
+        border: 1px solid $brandmorelight;
+        color: $branddark;
+    }
+}
+
+.btn-brandlight-outline{
+    @extend .btn-default;
+    background: $brandmorelight;
+    color: $branddark;
+    font-weight: 500;
+    border: 1px solid #c1bebe;
+    &:hover {
+        background: $brandmorelight;
+        border: 1px solid #c1bebe;
+        color: $branddark;
+    }
+}
+
+
+.btn-branddark {
+    @extend .btn-default;
+    background: $branddark;
+    border: 2px solid $branddark;
+    color: $white;
+    font-weight: 600;
+    &:hover {
+        background: $branddark;
+        border: 2px solid $branddark;
+        color: $white;
+    }
+}
+
+.btn-darkoutline {
+    @extend .btn-default;
+    background: transparent;
+    border: 1px solid $branddark;
+    color: $branddark;
+    &:hover {
+        background: transparent;
+        border: 1px solid $branddark;
+        color: $branddark;
+    }
+}
+
+.btn-blueoutline{
+    @extend .btn-default;
+    background: transparent;
+    border: 1px solid $brandcolor;
+    color: $brandcolor;
+    &:hover {
+        background: transparent;
+        border: 1px solid $brandcolor;
+        color: $brandcolor;
+    }
+}
+
+.btn-brandgreen{
+    @extend .btn-default;
+    background: $brandgreen;
+    border: 2px solid $brandgreen;
+    color: $white;
+    font-weight: 600;
+    &:hover {
+        background: $brandgreen;
+        border: 2px solid $brandgreen;
+        color: $white;
+    }
+}
+
+.btn-brandred{
+    @extend .btn-default;
+    background: $brandred;
+    border: 2px solid $brandred;
+    color: $white;
+    font-weight: 600;
+    &:hover {
+        background: $brandred;
+        border: 2px solid $brandred;
+        color: $white;
+    }
+}
+
+
+
+a.btn-brandlight, .btn-brandcolor{
+    line-height: 2;
+}
+a.btn-brandyellow,a.btn-brandyellow{
+    @include flexcenter;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+// - collapse panel
+
+.accordion .card-header:after {
+    font-family: "FontAwesome";
+    content: "\f106";
+    float: right;
+    font-size: 2rem;
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f107";
+}
+
+.accordion {
+    .card{
+        border-radius: 0;
+        border: 0;
+        @include box-shadow($shadowdark);
+    }
+    .card-header {
+        background: transparent;
+        border-bottom: 0;
+        padding: 1.6rem 1.25rem;
+    }
+    .card-body{
+        padding-top: 0;
+    }
+}

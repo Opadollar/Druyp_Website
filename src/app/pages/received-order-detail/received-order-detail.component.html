@@ -1,0 +1,57 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<section class="contentSections recieved-order-detail">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-image p-4">
+                    <img src="assets/images/products/img_sofa3.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <h4 class="content-subheading brand-color">Order #1231423</h4>
+                <p class="font-w-300 font-20 regular-text-dark mt-4">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley of type and scrambled it to make a type specimen book.
+                </p>
+                <div class="border-top border-bottom py-3 mt-4">
+                    <p class="font-20 regular-text-light"><span class="brand-dark">Phone/Email:</span> +1 444 2502 1234</p>
+                    <p class="font-20 regular-text-light mb-0"><span class="brand-dark">Address:</span> 22 Baker Street,London , UK</p>
+                </div>
+                <div class="footbtn mt-4">
+                    <button type="button" class="btn btn-brandcolor">Accept</button>
+                    <button type="button" class="btn btn-blueoutline ml-3" data-toggle="modal" data-target="#cancelReasonModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cancel Booked Property Modal -->
+<!-- Modal to add phone -->
+<div class="modal fade style-popup addphone-modal" id="cancelReasonModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button class="closemodal" data-dismiss="modal"><img src="assets/images/icons/ic_close.png"
+                    class="img-fluid"></button>
+            <div class="modal-body p-5">
+                <form [formGroup]="ordercancelReason">
+                    <div class="cancel-reason py-4">
+                        <div class="d-flex flex-wrap align-items-center mb-3">
+                            <p class="font-20 text-right mb-0 brand-light">Write Reason</p>
+                            <p class="font-20 text-right mb-0 brand-light text-right ml-auto">200</p>
+                        </div>
+                        <div class="form-group d-flex align-items-center">
+                           <textarea class="form-control" placeholder="Write here"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-brandcolor w-100 mt-2">Confirm</button>
+                    <a class="brand-color mt-4 text-center d-block font-22">Refund Terms & Conditions</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

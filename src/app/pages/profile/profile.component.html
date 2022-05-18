@@ -1,0 +1,133 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<div class="profile-banner">
+    <div class="container py-5 relative">
+        <div class="row profile-head">
+            <div class="col-4">
+                <h4 class="content-subheading text-capitalize text-white mb-0">My Account</h4>
+            </div>
+            <div class="col-8">
+                <h4 class="content-subheading text-capitalize text-white text-right mb-0"><a routerLink="/add-new-request" class="text-white"> Add new request </a></h4>
+            </div>
+        </div>
+
+        <div class="profile-section mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-options p-4">
+                        <div class="profile-image">
+                            <img src="assets/images/pictures/profile_1.jpg" class="img-fluid">
+                            <input type="file" class="chnageprofile" hidden id="userPofilepic"
+                                (change)="getProfilePic($event);">
+                            <button type="button" class="editprofile" data-file="userPofilepic"
+                                (click)="triggerFileInput($event)"><img src="assets/images/icons/pencil_white.png"
+                                    class="img-fluid" data-file="userPofilepic"></button>
+                        </div>
+                        <ul class="options mt-5 mb-3">
+                            <li><a routerLink="/profile" class="active d-flex align-items-center"><span class="userico mr-3"></span> Profile</a></li>
+                            <li><a routerLink="/property" class="d-flex align-items-center"><span class="propertyico mr-3"></span> My Property</a></li>
+                            <li><a routerLink="" class="d-flex align-items-center"><span class="logoutico mr-3"></span> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <div class="profile-details">
+                        <div class="completion-rate p-4">
+                            <div class="col-md-6 px-0 mb-3">
+                                <h5 class="d-flex align-items-center box-title font-w-600"><span>Complete your
+                                        profile</span> <span class="ml-auto">75%</span></h5>
+                                <div class="customrange-slider">
+                                    <div class="innerpipe" data-percent="75"></div>
+                                </div>
+                            </div>
+                            <div class="vrefied-status d-md-flex align-items-center p-3">
+                                <h5 class="box-title font-w-600 mb-0"><i
+                                        class="fas fa-check-circle mr-2 brand-color"></i> Verified Email Id</h5>
+                                <h5 class="box-title font-w-600 ml-md-4 mb-0 mt-3 mt-md-0"><i
+                                        class="fas fa-check-circle mr-2 brand-color"></i> Verified Mobile Number</h5>
+                            </div>
+                        </div>
+                        <div class="details mt-5 p-4">
+                            <div class="row">
+                                <div class="col-9 col-sm-10">
+                                    <h4 class="content-subheading font-w-600 mb-2">Profile</h4>
+                                    <p class="brand-light regular-text-light">Lorem Ipsum is simply dummy text of the..
+                                    </p>
+                                </div>
+                                <div class="col-3 col-sm-2">
+                                    <button type="button" class="editprofile-details d-block ml-auto"><img
+                                            src="assets/images/icons/pencil_blue.png" class="img-fluid"></button>
+                                </div>
+                            </div>
+
+                            <ul class="mt-4 user_details">
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-4">
+                                        <h5 class="title mb-0 font-w-300">Name</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <h5 class="box-title mb-0">Michelangelo Flores</h5>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-4">
+                                        <h5 class="title mb-0 font-w-300">Email</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <h5 class="box-title mb-0">michelangeloflores@gmail.com</h5>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-4">
+                                        <h5 class="title mb-0 font-w-300">Phone No.</h5>
+                                    </div>
+                                    <div class="col-8"><button type="button" class="addbtn brand-color"
+                                            data-toggle="modal" data-target="#addphoneNumber">+Add</button></div>
+                                </li>
+                                <li class="row py-3 px-2">
+                                    <div class="col-4">
+                                        <h5 class="title mb-0 font-w-300">Password</h5>
+                                    </div>
+                                    <div class="col-8"><button class="addbtn brand-color">+Add</button></div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add phone -->
+<div class="modal fade style-popup addphone-modal" id="addphoneNumber" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button class="closemodal" data-dismiss="modal"><img src="assets/images/icons/ic_close.png"
+                    class="img-fluid"></button>
+            <div class="modal-body p-5 loginform">
+                <img src="assets/images/icons/ic_verification@2x.svg" class="img-fluid d-block mx-auto">
+                <h4 class="content-subheading font-w-300 text-center mt-5">A verification code/OTP will be sent to your
+                    registered Phone number.</h4>
+                <form [formGroup]="otpVarification">
+                    <div class="optvarification py-4">
+                        <div class="form-group d-flex align-items-center">
+                            <input type="text" class="form-control">
+                            <input type="text" class="form-control">
+                            <input type="text" class="form-control">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="d-flex flex-wrap align-items-center">
+                            <button class="resendOtp d-block">Resend OTP?</button>
+                            <p class="regular-text-light font-w-600 text-right mb-0 ml-auto">00:00 Sec</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-brandcolor w-100 mt-5">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

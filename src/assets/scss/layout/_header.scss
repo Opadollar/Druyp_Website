@@ -1,0 +1,74 @@
+ .navigation-header{
+     background: $brandbluelight;
+     @include transition(1s, ease-out);
+     @include responsivemax(991.9){
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+     }
+     .nav-item{
+         @include paddingX(0.8rem);
+         .nav-link{
+             font-family: $primaryfont;
+             font-size: 1.05rem;
+             color: $branddark;
+             @include transition(0.3s,ease);
+             &:hover,&:focus, &:active{
+                 color: $brandcolor;
+             }
+         }
+         .active{
+            color: $brandcolor;
+        }
+     }
+    .btn-brandcolor{
+        height: 50px;
+    }
+    .navbar-brand{
+        img{
+            @include responsivemax(575.9){
+                max-width: 100px;
+            }
+        }
+    }
+ }
+
+ 
+ .fixedHeader{
+     @include responsivemin(992){
+        position: fixed;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        opacity: 0;
+        background: $brandbluelight;
+        z-index: 1000;
+        @include animation(headeranimate,0.5s,1);
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-timing-function: ease-out;
+        -moz-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+     }
+ }
+
+ @keyframes headeranimate{
+     0%{
+         top: -100%;
+         opacity: 0;
+     }
+     100%{
+         top: 0;
+         opacity: 1;
+     }
+ }
+
+
+ .mobilehead-margin{
+     @include responsivemax(991.9){
+        margin-top: 82px;
+     }
+ }

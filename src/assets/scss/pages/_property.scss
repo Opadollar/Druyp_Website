@@ -1,0 +1,118 @@
+.property-tabs{
+    @include border-radius-topside($primaryradius);
+    @include box-shadow($shadowdark);
+    background: $white;
+    min-height: 100px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    .nav-link{
+        font-size: 1.2rem;
+        font-weight: 500;
+        border: 0;
+        color: $branddark;
+        position: relative;
+        padding-bottom: 15px;
+        white-space: nowrap;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background: $brandcolor;
+            border-radius: 30px;
+            bottom: 0;
+            left: 25%;
+            @include transition(0.3s,ease);
+        }
+        &:hover,&:focus{
+            color: $brandcolor;
+        }
+        &:hover::before{
+            width: 60px;
+        }
+    }
+    .nav-link.active{
+        color: $brandcolor;
+        &::before{
+            width: 60px;
+        }
+    }
+}
+
+.property-showbox{
+    .property-image{
+        @include border-radius($primaryradius);
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+        width: 320px;
+        position: absolute;
+        z-index: 1;
+        @include box-shadow($shadowdark);      
+        @include flexcenter;
+        img{
+            max-width: 110px;
+        }
+        @include responsivemax(1199.9){
+            width: 275px;
+        }
+        @include responsivemax(991.9){
+            width: 300px;
+        }
+        @include responsivemax(767.9){
+            width: 100%;
+            height: 250px;
+            position: relative;
+            bottom: -45px;
+        }
+    }
+    .detail-box{
+        @include border-radius($primaryradius);
+        @include box-shadow($shadowdark);
+        min-height: 210px;
+        background: $white;
+        padding-left: 85px!important;
+        .features{
+            span{
+                @include marginX(10px);
+            }
+        }
+        @include responsivemax(767.9){
+            padding-left: 1.5rem!important;
+            padding-top: 70px!important;
+        }
+    }
+}
+
+.blue-badge{
+    text-transform: uppercase;
+    background: $brandcolor;
+    @include border-radius($primaryradius);
+    padding: .1rem 0.8rem;
+    color: $white;
+}
+
+.properties-wrp{
+    .property-showbox{
+        margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.payment-description-sec{
+    .paymentinfo-box{
+        .details{
+            min-height: 264px;
+        }  
+    } 
+}
+
+.cancel-reason{
+    textarea.form-control{
+        min-height: 300px;
+        background: transparent;
+        border: 1px solid $brandlight;
+    }
+}

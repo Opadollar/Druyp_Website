@@ -1,0 +1,243 @@
+<header class="navigation-header py-3 py-lg-4">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg py-0 flex-fill">
+                <a class="navbar-brand" routerLink="/home"><img src="assets/images/Druyp_logo_home.png"
+                        class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars brand-color"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav ml-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#homeSection">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#getChoiceSection">Get A Chioce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#downLoadSection">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button"
+                                class="btn btn-brandcolor d-flex align-items-center justify-content-center"
+                                data-toggle="modal" data-target="#userType" data-backdrop="static"
+                                data-keyboard="false"><img src="assets/images/icons/ic_user_home.png"
+                                    class="img-fluid mr-2">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<!-- User type check modal -->
+<!-- Modal -->
+<div class="modal fade style-popup user-typemodal" id="userType" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button class="closemodal" data-dismiss="modal"><img src="assets/images/icons/ic_close.png"
+                    class="img-fluid"></button>
+            <div class="modal-body p-4 p-md-5">
+                <h4 class="box-title">Please select who you are, before Signing up!</h4>
+                <ul>
+                    <li class="row border-bottom py-4 px-2">
+                        <div class="col-8">
+                            <h5 class="title mb-0 font-w-400">Tenant</h5>
+                        </div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="tenant" name="userType">
+                                <label class="custom-control-label" for="tenant"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row border-bottom py-4 px-2">
+                        <div class="col-8">
+                            <h5 class="title mb-0 font-w-400">House Owner</h5>
+                        </div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="houseOwner" name="userType">
+                                <label class="custom-control-label" for="houseOwner"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row border-bottom py-4 px-2">
+                        <div class="col-8">
+                            <h5 class="title mb-0 font-w-400">Furniture Company</h5>
+                        </div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="furnitureCompany" name="userType">
+                                <label class="custom-control-label" for="furnitureCompany"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row py-4 px-2">
+                        <div class="col-8">
+                            <h5 class="title mb-0 font-w-400">Cleaning Company</h5>
+                        </div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="cleaningCompany" name="userType">
+                                <label class="custom-control-label" for="cleaningCompany"></label>  
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-brandcolor mt-4 w-100" data-toggle="modal" data-target="#loginModal" data-backdrop="static"
+                data-keyboard="false" data-dismiss="modal">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========== Login & Signup Modals =========== -->
+<!-- Modal -->
+<div class="modal fade style-popup" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button class="closemodal" data-dismiss="modal"><img src="assets/images/icons/ic_close.png"
+                    class="img-fluid"></button>
+            <div class="modal-body p-4 p-md-5 loginform">
+                <div class="row p-2">
+                    <div class="col-lg-6 col-xl-6 d-none d-lg-block">
+                        <img src="assets/images/pictures/illustration_sign_in.png" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 col-xl-5 offset-xl-1">
+
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="loginWrp" role="tabpanel"
+                                aria-labelledby="home-tab">
+                                <h3 class="heading-centered text-left m-0">Welcome to</h3>
+                                <h4 class="heading-centered text-left brand-color text-left mb-5">Dryup</h4>
+
+                                <form [formGroup]="userLogin" (ngSubmit)="onLogin()">
+                                    <div class="form-group emailfield mb-4">
+                                        <img src="assets/images/icons/ic_email_login.png" class="img-fluid">
+                                        <input type="text" class="form-control" formControlName="userId"
+                                            placeholder="example@gmail.com"
+                                            [ngClass]="{ 'is-invalid': isSubmitted && f_login.userId.errors }">
+                                        <div *ngIf="isSubmitted && f_login.userId.errors" class="invalid-feedback">
+                                            <div *ngIf="f_login.userId.errors.required">User id is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group password-field mb-4">
+                                        <img src="assets/images/icons/ic_password_login.png" class="img-fluid">
+                                        <input type="password" class="form-control" formControlName="userPassword"
+                                            [ngClass]="{ 'is-invalid': isSubmitted && f_login.userPassword.errors }">
+                                        <div *ngIf="isSubmitted && f_login.userPassword.errors"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f_login.userPassword.errors.required">Password is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                        <a class="ml-auto d-block brand-dark" data-toggle="tab" href="#forgotPassword"
+                                            role="tab" aria-controls="home" aria-selected="true"
+                                            (click)="removeClass($event)">Forgot Password?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-brandcolor w-100 mt-5">Sign In</button>
+                                    <button type="button" class="triggerclosemodal d-none"
+                                        data-dismiss="modal"></button>
+                                </form>
+
+                                <p class="regular-text-light mt-4 text-center">Don't have an account? <a
+                                        class="brand-color font-w-600 tablink" data-toggle="tab" href="#signupWrp"
+                                        role="tab" aria-controls="home" aria-selected="true"
+                                        (click)="removeClass($event)">Sign Up</a></p>
+
+                            </div>
+                            <!-- ==== Login Close ====== -->
+
+                            <div class="tab-pane fade" id="signupWrp" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3 class="heading-centered text-left mb-4">Sign Up</h3>
+                                <form [formGroup]="userSignup" (ngSubmit)="onRegister()">
+                                    <div class="form-group namefield mb-4">
+                                        <img src="assets/images/icons/ic_profile_active.png" class="img-fluid">
+                                        <input type="text" class="form-control" formControlName="userName"
+                                            placeholder="Your Name"
+                                            [ngClass]="{ 'is-invalid': isSignuped && f_register.userName.errors }">
+                                        <div *ngIf="isSignuped && f_register.userName.errors" class="invalid-feedback">
+                                            <div *ngIf="f_register.userName.errors.required">Name is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group emailfield mb-4">
+                                        <img src="assets/images/icons/ic_email_login.png" class="img-fluid">
+                                        <input type="text" class="form-control" formControlName="email"
+                                            placeholder="example@gmail.com"
+                                            [ngClass]="{ 'is-invalid': isSignuped && f_register.email.errors }">
+                                        <div *ngIf="isSignuped && f_register.email.errors" class="invalid-feedback">
+                                            <div *ngIf="f_register.email.errors.required">Email is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group phonefield mb-4">
+                                        <img src="assets/images/icons/ic_phone_number.png" class="img-fluid">
+                                        <input type="number" class="form-control" formControlName="phoneNumber"
+                                            [ngClass]="{ 'is-invalid': isSignuped && f_register.phoneNumber.errors }">
+                                        <div *ngIf="isSignuped && f_register.phoneNumber.errors"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f_register.phoneNumber.errors.required">Phone Number is required
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group password-field mb-4">
+                                        <img src="assets/images/icons/ic_password_login.png" class="img-fluid">
+                                        <input type="password" class="form-control" formControlName="password"
+                                            [ngClass]="{ 'is-invalid': isSignuped && f_register.password.errors }">
+                                        <div *ngIf="isSignuped && f_register.password.errors" class="invalid-feedback">
+                                            <div *ngIf="f_register.password.errors.required">Password is required</div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-brandcolor w-100 mt-4">Sign Up</button>
+                                    <button type="button" class="triggerclosemodal d-none"
+                                        data-dismiss="modal"></button>
+                                </form>
+
+                                <p class="regular-text-light mt-4 text-center">Already have an account? <a
+                                        class="brand-color font-w-600 tablink" data-toggle="tab" href="#loginWrp"
+                                        role="tab" aria-controls="profile" aria-selected="false"
+                                        (click)="removeClass($event)">Sign In</a></p>
+
+                            </div>
+
+                            <!-- ======= SignUp Wrp Close =========-->
+
+                            <div class="tab-pane fade" id="forgotPassword" role="tabpanel"
+                                aria-labelledby="contact-tab">
+                                <h3 class="heading-centered text-left mb-4">Reset Password</h3>
+                                <form [formGroup]="forgotPassword">
+                                    <p class="regular-text-dark">Enter Your registered email id</p>
+                                    <div class="form-group emailfield mb-4">
+                                        <img src="assets/images/icons/ic_email_login.png" class="img-fluid">
+                                        <input type="text" class="form-control" formControlName="emailId"
+                                            placeholder="example@gmail.com">
+                                    </div>
+                                    <button class="btn btn-brandcolor w-100 mt-4">Submit</button>
+                                    <button type="button" class="triggerclosemodal d-none" data-dismiss="modal">Singn
+                                        In</button>
+                                </form>
+
+                                <p class="regular-text-light mt-4 text-center">Back to <a
+                                        class="brand-color font-w-600 tablink" data-toggle="tab" href="#loginWrp"
+                                        role="tab" aria-controls="home" aria-selected="true"
+                                        (click)="removeClass($event)">Sign In</a></p>
+                            </div>
+
+                            <!-- ======= Forgot Password Wrp Close =========-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

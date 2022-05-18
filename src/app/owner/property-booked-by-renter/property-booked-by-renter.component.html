@@ -1,0 +1,305 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<!-- ======== Content Sections ======= -->
+
+<section class="contentSections product-images-gallery">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-8">
+                <h4 class="content-subheading mb-0">Little white house 431 India St, London, UK</h4>
+                <p class="regular-text-dark mb-0 features mt-2">4 bd <span>/</span> 3 ba
+                    <span>/</span> 1470 sqft <span>/</span></p>
+            </div>
+            <div class="col-4">
+                <h4 class="content-subheading brand-color mb-0 text-right">1850 <small class="font-13 text-lowercase">/
+                        mo</small></h4>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="big_imgbox">
+                    <img src="assets/images/pictures/img_home_details.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Details -->
+        <div class="product-description py-4 mt-3">
+            <div class="row mb-3 align-items-center">
+                <div class="col-md-8">
+                    <h4 class="content-subheading">Property Details</h4>
+                </div>
+                <div class="col-md-4">
+                    <div class="property-type py-3 px-3">
+                        <p class="regular-text-dark mb-0">Commercial</p>
+                    </div>
+                </div>
+            </div>
+            <p class="regular-text-dark">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                in
+                a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin
+                professor at Hampden-Sydney College in Virginia,</p>
+            <p class="regular-text-dark">looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
+                passage, and going through the cites of the word in classical literature, discovered the undoubtable
+                source.
+                Lorem Ipsum comes from sections.</p>
+        </div>
+    </div>
+</section>
+<!-- Gallery section close -->
+
+<section class="contentSections property-features-sec">
+    <div class="container">
+        <div class="col-lg-8">
+            <h5 class="box-title font-w-500 brand-color">Property Description</h5>
+            <ul class="mt-4">
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">Kosher or non-kosher</h5>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="kosher" checked>
+                            <label>Yes</label>
+                        </div>
+                        <span class="mx-2 font-w-300 font-20">/</span>
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="kosher">
+                            <label>No</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">Residential/Commercial</h5>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="residential">
+                            <label>Yes</label>
+                        </div>
+                        <span class="mx-2 font-w-300 font-20">/</span>
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="residential">
+                            <label>No</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">Handicap accessibility?</h5>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="handicap">
+                            <label>Yes</label>
+                        </div>
+                        <span class="mx-2 font-w-300 font-20">/</span>
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="handicap" checked>
+                            <label>No</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">No. of people allowed in property house or
+                            apt.
+                        </h5>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <div class="product-quantity d-flex align-items-center" id="peopleAllowed">
+                            <button type="button" class="minusquant">-</button>
+                            <input type="text" class="" value="1" minval="1" maxval="10" readonly>
+                            <button type="button" class="plusquant">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">No. of bedrooms and baths</h5>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <div class="product-quantity d-flex align-items-center" id="bedroomsCount">
+                            <button type="button" class="minusquant">-</button>
+                            <input type="text" class="" value="1" minval="3" maxval="10" readonly>
+                            <button type="button" class="plusquant">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">built Up Area(square ft)</h5>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <div class="product-quantity d-flex align-items-center" id="areaCount">
+                            <button type="button" class="minusquant">-</button>
+                            <input type="text" class="" value="850" minval="650" maxval="10" readonly>
+                            <button type="button" class="plusquant">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">Furniture availibility</h5>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="furniture">
+                            <label>Yes</label>
+                        </div>
+                        <span class="mx-2 font-w-300 font-20">/</span>
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="furniture">
+                            <label>No</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-md-8">
+                        <h5 class="title mb-0 font-w-400">Internet Connection</h5>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="internet" checked>
+                            <label>Yes</label>
+                        </div>
+                        <span class="mx-2 font-w-300 font-20">/</span>
+                        <div class="yesnotype-radio">
+                            <input type="radio" name="internet">
+                            <label>No</label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h5 class="box-title font-w-500 mt-5 brand-color">Utilities</h5>
+            <ul class="mt-4">
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Heat</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isHeat" name="example1" checked>
+                            <label class="custom-control-label" for="isHeat"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Electric</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isElectric" name="example1" checked>
+                            <label class="custom-control-label" for="isElectric"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Central Air or Window Unit</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isCentralAir" name="example1">
+                            <label class="custom-control-label" for="isCentralAir"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Gas
+                        </h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isGas" name="example1" checked>
+                            <label class="custom-control-label" for="isGas"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Laundry</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isLaundry" name="example1">
+                            <label class="custom-control-label" for="isLaundry"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Drier</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isDrier" name="example1">
+                            <label class="custom-control-label" for="isDrier"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">M-wave</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isMwave" name="example1">
+                            <label class="custom-control-label" for="isMwave"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Dishwasher</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isDishwasher" name="example1">
+                            <label class="custom-control-label" for="isDishwasher"></label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row border-bottom py-3 px-2">
+                    <div class="col-8">
+                        <h5 class="title mb-0 font-w-400">Refrigrator</h5>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="isRefrigrator" name="example1">
+                            <label class="custom-control-label" for="isRefrigrator"></label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="form-group add-description">
+                <p class="font-20 mb-3 mt-5 brand-color">Upload pictures & vidoes</p>
+                <div class="d-flex flex-wrap imagebox">
+                    <div class="uploaded-image p-3">
+                        <img src="assets/images/products/img_sofa1.png" class="img-fluid">
+                    </div>
+                    <div class="uploaded-image p-3">
+                        <img src="assets/images/products/img_sofa2.png" class="img-fluid">
+                    </div>
+                    <div class="uploaded-image p-3">
+                        <img src="assets/images/products/img_sofa3.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="add-description">
+                <p class="font-20 mb-3 mt-5 brand-color">Other Description</p>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Description..."></textarea>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section> 

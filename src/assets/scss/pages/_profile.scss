@@ -1,0 +1,274 @@
+.profile-banner{
+    min-height: 200px;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 196px;
+        position: absolute;
+        left: 0;
+        background: $brandcolor;
+    }
+    .profile-head{
+        .content-subheading{
+            @include responsivemax(575.9){
+                font-size: 1rem!important;
+            }
+        }
+    }
+}
+
+.profile-section{
+    .profile-options{
+        @include border-radius($primaryradius);
+        @include box-shadow($shadowdark);
+        background: $white;
+        min-height: 100px;
+        .profile-image{
+            position: relative;
+            @include square_topx(300);
+            @include border-radius($primaryradius);
+            overflow: hidden;
+            @include flexcenter;
+            margin: auto;
+            @include responsivemax(1199.9){
+                @include square_topx(225);
+            }
+            .editprofile{
+                position: absolute;
+                @include circle(50);
+                border: 3px solid $white;
+                background: $brandcolor;
+                @include flexcenter;
+                bottom: 10px;
+                color: $white;
+                img{
+                    width: 20px;
+                }
+            }
+        }
+        .options{
+            li{
+                margin-bottom: 10px;
+                a{
+                    display: block;
+                    font-size: 1.2rem;
+                    color: $branddark;
+                    padding: 15px;
+                    @include border-radius(5);
+                    background: $brandbluelight;
+
+                    .userico{
+                        @include square_topx(20);
+                        background: url(/assets/images/icons/ic_profile_non_active.png) no-repeat;
+                        background-size: contain;
+                        display: block;
+                    }
+                    
+                    .propertyico{
+                        @include square_topx(20);
+                        background: url(/assets/images/icons/ic_my_property_non_active.png) no-repeat;
+                        background-size: contain;
+                        display: block;
+                    }
+
+                    .bokkingrequestico{
+                        @include square_topx(20);
+                        background: url(/assets/images/icons/ic_booking_request_non_active.png) no-repeat;
+                        // background-size: contain;
+                        display: block;
+                    }
+
+                    .listpropertyico{
+                        @include square_topx(20);
+                        background: url(/assets/images/icons/ic_booking_request_non_active.png) no-repeat;
+                        background-size: contain;
+                        display: block;
+                    }
+                    // 
+                    
+                    .logoutico{
+                        @include square_topx(20);
+                        background: url(/assets/images/icons/ic_logout_non_active.png) no-repeat;
+                        background-size: contain;
+                        display: block;
+                    }
+
+                    &:hover{
+                        color: $brandcolor;
+                        .userico{
+                            background: url(/assets/images/icons/ic_profile_active.png) no-repeat;
+                        }
+                        .propertyico{
+                            background: url(/assets/images/icons/ic_my_property_active.png) no-repeat;
+                        }
+                        .logoutico{
+                            background: url(/assets/images/icons/ic_logout_active.png) no-repeat;
+                        }
+                        .bokkingrequestico{
+                            background: url(/assets/images/icons/ic_booking_request_active.png) no-repeat;
+                        }
+                        
+                    }
+                }
+                .active{
+                    color: $brandcolor;
+                    .userico{
+                        background: url(/assets/images/icons/ic_profile_active.png) no-repeat;
+                    }
+                    .propertyico{
+                        background: url(/assets/images/icons/ic_my_property_active.png) no-repeat;
+                    }
+                    .logoutico{
+                        background: url(/assets/images/icons/ic_logout_active.png) no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .profile-details{
+        .completion-rate{
+            @include border-radius($primaryradius);
+            @include box-shadow($shadowdark);
+            background: $white;
+            min-height: 100px;
+            .vrefied-status{
+                padding: 10px;
+                @include border-radius($primaryradius);
+                background: $brandbluelight;
+            }
+        }
+        .details{
+            @include border-radius($primaryradius);
+            @include box-shadow($shadowdark);
+            background: $white;
+            min-height: 100px;
+            .addbtn{
+                background: transparent;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+            .user_details{
+                @include responsivemax(575.9){
+                    .box-title {
+                        font-size: 0.8rem!important;
+                        word-break: break-all;
+                    }
+                    h5.title{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.customrange-slider{
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: $brandlight;
+    position: relative;
+    .innerpipe{
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 75%;
+        background: $brandcolor;
+        border-radius: 30px;
+    }
+}
+
+.editprofile-details{
+    @include circle(50);
+    border: 3px solid $brandcolor;
+    background: $white;
+    @include flexcenter;
+    color: $brandcolor;
+    img{
+        width: 20px;
+    }
+}
+
+.optvarification{
+    .form-control{
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid $branddark;
+        border-radius: 0;
+        margin-right: 10px;
+        text-align: center;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover,&:focus{
+            background: transparent;
+            border-color: $brandcolor;
+        }
+    }
+    .resendOtp{
+        background: transparent;
+        font-size: 1.2rem;
+        color: $brandcolor;
+        font-weight: 600;
+    }
+}
+
+
+.add-furniture-sec{
+    .btn-brandcolor{
+        width: 60%;
+        @include responsivemax(575.9){
+            width: 100%;
+        }
+    }
+}
+
+.add-description{
+    textarea.form-control{
+        min-height: 150px;
+        background: transparent;
+        border: 1px solid $brandlight;
+    }
+}
+
+.imagebox{
+    .uploaded-image{
+        @include square_topx(120);
+        @include border-radius($primaryradius);
+        border: 1px solid $brandcolor;
+        @include flexcenter;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+}
+.uploadimage-btn{
+    @include square_topx(120);
+    overflow: hidden;
+    position: relative;
+    @include box-shadow($shadowdark);
+    @include border-radius($primaryradius);
+    cursor: pointer;
+    margin-bottom: 15px;
+    .fileuploadlable{
+        @include square_topx(120);
+        @include border-radius($primaryradius);
+        background: $white;
+        @include flexcenter;
+        color: $brandcolor;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .inputfile{
+        position: absolute;
+        @include square_otherval(100%);
+        @include border-radius($primaryradius);
+        opacity: 0;
+    }
+}
+
+.profile-section{
+    @include responsivemax(575.9){
+        margin-top: 1.5rem!important;
+    }
+}

@@ -1,0 +1,355 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<div class="profile-banner listproperty-banner">
+    <div class="container py-5 relative">
+        <div class="row profile-head">
+            <div class="col-4">
+                <h4 class="content-subheading text-capitalize text-white mb-0">My Account</h4>
+            </div>
+        </div>
+
+        <div class="profile-section mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-options p-4">
+                        <div class="profile-image">
+                            <img src="assets/images/pictures/profile_1.jpg" class="img-fluid">
+                            <input type="file" class="chnageprofile" hidden id="userPofilepic"
+                                (change)="getProfilePic($event);">
+                            <button type="button" class="editprofile" data-file="userPofilepic"
+                                (click)="triggerFileInput($event)"><img src="assets/images/icons/pencil_white.png"
+                                    class="img-fluid" data-file="userPofilepic"></button>
+                        </div>
+                        <ul class="options mt-5 mb-3">
+                            <li><a routerLink="/owner-profile" class="d-flex align-items-center"><span
+                                        class="userico mr-3"></span> Profile</a></li>
+                            <li><a routerLink="/list-new-property" class="active d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> List New Property</a></li>
+                            <li><a routerLink="/owner-my-properties" class="d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> My Property</a></li>
+                            <li><a routerLink="/booking-request" class="d-flex align-items-center"><span
+                                        class="bokkingrequestico mr-3"></span> Booking Request</a></li>
+                            <li><a routerLink="" class="d-flex align-items-center"><span class="logoutico mr-3"></span>
+                                    Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <div class="profile-details list-new-property">
+                        <form [formGroup]="listNewProperty">
+                            <div class="details p-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-7">
+                                        <h5 class="box-title font-w-500 mb-0 brand-color">List New Property </h5>
+                                    </div>
+                                    <div class="col-md-5 mt-3 mt-md-0">
+                                        <div class="form-group mb-0">
+                                            <select class="form-control transparent-field">
+                                                <option selected disabled>Select Property Type</option>
+                                                <option>Furniture</option>
+                                                <option>Cleaner</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="box-title font-w-500 mt-5 brand-color">Property Description</h5>
+                            <ul class="mt-4">
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">Kosher or non-kosher</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="kosher">
+                                            <label>Yes</label>
+                                        </div>
+                                        <span class="mx-2 font-w-300 font-20">/</span>
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="kosher">
+                                            <label>No</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">Residential/Commercial</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="residential">
+                                            <label>Yes</label>
+                                        </div>
+                                        <span class="mx-2 font-w-300 font-20">/</span>
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="residential">
+                                            <label>No</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">Handicap accessibility?</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="handicap">
+                                            <label>Yes</label>
+                                        </div>
+                                        <span class="mx-2 font-w-300 font-20">/</span>
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="handicap">
+                                            <label>No</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">No. of people allowed in property house or
+                                            apt.
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex justify-content-end">
+                                        <div class="product-quantity d-flex align-items-center" id="peopleAllowed">
+                                            <button type="button" class="minusquant">-</button>
+                                            <input type="text" class="" value="1" minval="1" maxval="10" readonly>
+                                            <button type="button" class="plusquant">+</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">No. of bedrooms and baths</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex justify-content-end">
+                                        <div class="product-quantity d-flex align-items-center" id="bedroomsCount">
+                                            <button type="button" class="minusquant">-</button>
+                                            <input type="text" class="" value="1" minval="1" maxval="10" readonly>
+                                            <button type="button" class="plusquant">+</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">built Up Area(square ft)</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex justify-content-end">
+                                        <div class="product-quantity d-flex align-items-center" id="areaCount">
+                                            <button type="button" class="minusquant">-</button>
+                                            <input type="text" class="" value="1" minval="1" maxval="10" readonly>
+                                            <button type="button" class="plusquant">+</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">Furniture availibility</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="furniture">
+                                            <label>Yes</label>
+                                        </div>
+                                        <span class="mx-2 font-w-300 font-20">/</span>
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="furniture">
+                                            <label>No</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-md-8">
+                                        <h5 class="title mb-0 font-w-400">Internet Connection</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="internet">
+                                            <label>Yes</label>
+                                        </div>
+                                        <span class="mx-2 font-w-300 font-20">/</span>
+                                        <div class="yesnotype-radio">
+                                            <input type="radio" name="internet">
+                                            <label>No</label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <h5 class="box-title font-w-500 mt-5 brand-color">Utilities</h5>
+                            <ul class="mt-4">
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Heat</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isHeat"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isHeat"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Electric</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isElectric"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isElectric"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Central Air or Window Unit</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isCentralAir"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isCentralAir"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Gas
+                                        </h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isGas"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isGas"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Laundry</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isLaundry"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isLaundry"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Drier</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isDrier"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isDrier"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">M-wave</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isMwave"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isMwave"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Dishwasher</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isDishwasher"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isDishwasher"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row border-bottom py-3 px-2">
+                                    <div class="col-8">
+                                        <h5 class="title mb-0 font-w-400">Refrigrator</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="isRefrigrator"
+                                                name="example1">
+                                            <label class="custom-control-label" for="isRefrigrator"></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="form-group add-description">
+                                <p class="font-20 mb-3 mt-5 brand-color">Upload pictures & vidoes</p>
+                                <div class="d-flex flex-wrap imagebox">
+                                    <div class="uploaded-image p-3">
+                                        <img src="assets/images/products/img_sofa1.png" class="img-fluid">
+                                    </div>
+                                    <div class="uploaded-image p-3">
+                                        <img src="assets/images/products/img_sofa2.png" class="img-fluid">
+                                    </div>
+                                    <div class="uploaded-image p-3">
+                                        <img src="assets/images/products/img_sofa3.png" class="img-fluid">
+                                    </div>
+                                    <div class="uploadimage-btn">
+                                        <input type="file" class="inputfile">
+                                        <label class="fileuploadlable"><img src="assets/images/icons/ic_plus_big@2x.svg"
+                                            width="50" class="img-fluid"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-description">
+                                <p class="font-20 mb-3 mt-5 brand-color">Other Description</p>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Write here"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6 pt-3">
+                                        <input type="text" class="form-control transparent-field"
+                                            placeholder="Title for the property listed">
+                                    </div>
+                                    <div class="form-group col-md-6 pt-3">
+                                        <input type="text" class="form-control transparent-field"
+                                            placeholder="Property Address">
+                                    </div>
+                                    <div class="form-group col-md-6 pt-3">
+                                        <input type="text" class="form-control transparent-field"
+                                            placeholder="Cable Information">
+                                    </div>
+                                    <div class="form-group col-md-6 pt-3">
+                                        <input type="text" class="form-control transparent-field"
+                                            placeholder="Booking Amount Per Month">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group add-description">
+                                <p class="font-20 mb-3 mt-5 brand-color">Ownership Proof</p>
+                                <div class="d-flex flex-wrap imagebox">
+                                    <div class="uploaded-image p-3">
+                                        <img src="assets/images/icons/ic_upload_document@2x.svg" width="50"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="uploadimage-btn">
+                                        <input type="file" class="inputfile">
+                                        <label class="fileuploadlable"><img src="assets/images/icons/ic_plus_big@2x.svg"
+                                                width="50" class="img-fluid"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-brandcolor mt-4">Post Property</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,297 @@
+<div class="homebanner-section pt-3" id="homeSection">
+    <app-header></app-header>
+    <div class="banner-content mt-5 d-flex align-items-lg-center">
+        <div class="container pt-5 pb-4 pb-md-5">
+            <div class="row pb-5 justify-content-center justify-content-lg-start">
+                <div class="col-md-10 col-lg-5">
+                    <h1 class="text-capitalize text-center text-lg-left">Find perfect houses stay in peace</h1>
+                    <p class="regular-text-dark mt-3 text-center text-lg-left">Contrary to popular belief, Lorem Ipsum
+                        is not simply random text.
+                        It has roots in a piece of
+                        classical Latin literature from 45</p>
+                </div>
+            </div>
+        </div>
+        <div class="bannerimg-layer d-none d-lg-block">
+            <img src="assets/images/pictures/img_hero_home.png" class="img-fluid">
+        </div>
+    </div>
+    <div class="herosearch-bar">
+        <div class="container">
+            <div class="searhbarwrp" id="filterSearch">
+                <form [formGroup]="searchFilter">
+                    <div class="row d-block d-sm-flex" (click)="onClickFilterBtn($event)">
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="filterbox p-3 d-flex flex-column justify-content-center rightseperator">
+                                <button type="button" class="btnfilter d-flex" data-select="locationSelection">Location
+                                    <img src="assets/images/br_down.webp" class="ml-auto"></button>
+                                <select class="filterselect" id="locationSelection" (change)="getSelectVal($event)"
+                                    #myselect>
+                                    <option>West India</option>
+                                    <option>India</option>
+                                    <option>North India</option>
+                                    <option>South India</option>
+                                    <option>West India</option>
+                                    <option>West India</option>
+                                    <option>West India</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="filterbox p-3 d-flex flex-column justify-content-center rightseperator">
+                                <button type="button" class="btnfilter d-flex" data-select="houseType">House Type <img
+                                        src="assets/images/br_down.webp" class="ml-auto"></button>
+                                <select class="filterselect" id="houseType" (change)="getSelectVal($event)">
+                                    <option>Apartment</option>
+                                    <option>Apartment</option>
+                                    <option>Apartment</option>
+                                    <option>Apartment</option>
+                                    <option>Apartment</option>
+                                    <option>Apartment</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="filterbox p-3 d-flex flex-column justify-content-center">
+                                <button type="button" class="btnfilter d-flex" data-select="maxPrice">Max Price <img
+                                        src="assets/images/br_down.webp" class="ml-auto"></button>
+                                <select class="filterselect" id="maxPrice" (change)="getSelectVal($event)">
+                                    <option>$ 1250</option>
+                                    <option>$ 1250</option>
+                                    <option>$ 1250</option>
+                                    <option>$ 1250</option>
+                                    <option>$ 1250</option>
+                                    <option>$ 1250</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="filterbox">
+                                <button class="filtersearch">Search Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========= Banner Section Close ========== -->
+
+<!--============ Products carousel section ==========-->
+<section class="contentSections getchoice-section" id="getChoiceSection">
+    <div class="container pt-5">
+        <div class="content-head">
+            <h3 class="heading-centered">Get a choice</h3>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="row justify-content-end">
+            <div class="col-xl-11">
+                <!-- <div class="row">
+                    <div class="col-lg-4 col-md-6" *ngFor="let product of products">
+                        <a routerLink="/product-detail">
+                            <div class="product-item gradient-overlay">
+                                <div class="product-image" style="background-image: url({{product.imgurl}})">
+                                </div>
+                                <div class="product-details px-3 py-4">
+                                    <div class="namedetail d-flex">
+                                        <h5 class="box-title nametitle">{{product.nametitle}}</h5>
+                                        <h5 class="price box-title brand-color mb-0 ml-auto">$ {{product.price}} <small
+                                                class="font-13 text-lowercase">/ mo</small></h5>
+                                    </div>
+                                    <div class="features">
+                                        <p class="regular-text-dark mb-0">{{product.bedrooms}} Bedrooms <span>/</span>
+                                            {{product.bathrooms}} Bathrooms
+                                            <span>/</span> {{product.size}} sqft <span>/</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
+                <!-- carousel -->
+                <!-- <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let product of products">
+                        <ng-template carouselSlide [id]="product.id">
+                            <a href="javscript:void(0);">
+                                <div class="product-item gradient-overlay">
+                                    <div class="product-image" style="background-image: url({{product.imgurl}})">
+                                    </div>
+                                    <div class="product-details px-3 py-4">
+                                        <div class="namedetail d-flex">
+                                            <h5 class="box-title nametitle">{{product.nametitle}}</h5>
+                                            <h5 class="price box-title brand-color mb-0 ml-auto">$ {{product.price}}
+                                                <small class="font-13 text-lowercase">/ mo</small></h5>
+                                        </div>
+                                        <div class="features">
+                                            <p class="regular-text-dark mb-0">{{product.bedrooms}} Bedrooms
+                                                <span>/</span>
+                                                {{product.bathrooms}} Bathrooms
+                                                <span>/</span> {{product.size}} sqft <span>/</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o> -->
+
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                    <div ngxSlickItem *ngFor="let product of products" class="slide px-3 pb-4">
+                        <a routerLink="/product-detail">
+                            <div class="product-item gradient-overlay">
+                                <div class="product-image" style="background-image: url({{product.imgurl}})">
+                                </div>
+                                <div class="product-details px-3 py-4">
+                                    <div class="namedetail d-flex">
+                                        <h5 class="box-title nametitle">{{product.nametitle}}</h5>
+                                        <h5 class="price box-title brand-color mb-0 ml-auto">$ {{product.price}} <small
+                                                class="font-13 text-lowercase">/ mo</small></h5>
+                                    </div>
+                                    <div class="features">
+                                        <p class="regular-text-dark mb-0">{{product.bedrooms}} Bedrooms <span>/</span>
+                                            {{product.bathrooms}} Bathrooms
+                                            <span>/</span> {{product.size}} sqft <span>/</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== Process Section ======== -->
+<section class="contentSections">
+    <div class="container pt-5">
+        <div class="content-head">
+            <h3 class="heading-centered">Buying new house is simple</h3>
+        </div>
+    </div>
+    <div class="pb-5">
+        <img src="assets/images/pictures/img_buying_new_house.png" class="img-fluid">
+    </div>
+</section>
+
+<!-- ======== Our Customers ======== -->
+
+<section class="contentSections ourcustomers-section">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-7 d-none d-lg-block">
+                <div class="circular-slider">
+                    <div class="outerlayer moveclockwise ratateclockwise">
+                        <div class="slideritem item_1"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="slideritem item_2"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="slideritem item_3"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="slideritem item_4"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="sublauer_1 moveanticlockwise ratateanticlockwise">
+                        <div class="slideritem item_5"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="slideritem item_6"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="slideritem item_7"><img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="innerlayer">
+                        <div class="active-customerimg">
+                            <img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="content-head">
+                    <h3 class="heading-centered text-left">Our Customer</h3>
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-inner mb-4">
+                        <div class="testimonial-box">
+                            <h5>Awesome</h5>
+                            <p class="regular-text-dark">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when
+                                an unknown printer took a galley</p>
+                            <div class="customer_profile d-flex align-items-center mt-4">
+                                <div class="customer-profile">
+                                    <img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                                </div>
+                                <div class="customer-detail pl-3">
+                                    <p class="regular-text-dark font-w-600 mb-0">Jasmine Dunn</p>
+                                    <p class="brand-light">South Cleora</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-navigation d-flex align-items-center mt-4">
+                        <button class="carousel_nav prevbtn"><img src="assets/images/icons/ic_arrow_left.png"
+                                class="img-fluid"></button>
+                        <button class="carousel_nav nextbtn"><img src="assets/images/icons/ic_arrow_right.png"
+                                class="img-fluid ml-2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ Our App Section ========= -->
+
+<section class="contentSections appsection" id="downLoadSection">
+    <div class="content-head px-3 py-5">
+        <h3 class="heading-centered">Our App</h3>
+    </div>
+    <div class="container pb-5 appcontent d-flex align-items-center">
+        <div class="row flex-fill">
+            <div class="col-lg-5">
+                <h3 class="heading-centered text-left mb-0">Get Started with Dryup app...</h3>
+                <p class="regular-text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                <p class="regular-text-dark">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                    roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="d-flex align-items-center mt-4">
+                    <a href="#"><img src="assets/images/pictures/btn_app_store.png" class="img-fluid"></a>
+                    <a href="#" class="ml-3"><img src="assets/images/pictures/btn_google_play.png"
+                            class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mockupslider d-none d-lg-block col-lg-7 pl-5">
+        <img src="assets/images/pictures/iphone_white.png" class="img-fluid phonelayer">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigMockup">
+            <div ngxSlickItem *ngFor="let mockup of mockupslider" class="slide">
+                <div class="mocup-img">
+                    <img src="{{mockup.imgurl}}" class="">
+                </div>
+            </div>
+        </ngx-slick-carousel>
+        <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem class="slide">
+                <div class="mocup-img">
+                    <img src="assets/images/pictures/our_app_mobile_1.png" class="img-fluid">
+                </div>
+            </div>
+            <div ngxSlickItem class="slide">
+                <div class="mocup-img">
+                    <img src="assets/images/pictures/our_app_mobile_2.png" class="img-fluid">
+                </div>
+            </div>
+            <div ngxSlickItem class="slide">
+                <div class="mocup-img">
+                    <img src="assets/images/pictures/our_app_mobile_3.png" class="img-fluid">
+                </div>
+            </div>
+        </ngx-slick-carousel> -->
+    </div>
+</section>
+

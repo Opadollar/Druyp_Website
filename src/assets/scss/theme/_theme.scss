@@ -1,0 +1,726 @@
+/*------------------------------------------
+//========  THEME SCSS FILE ================
+------------------------------------------
+*/
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+    font-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: translate3d(1, 1, 1);
+    transform: translate3d(1, 1, 1);
+    text-rendering: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {
+    outline: none;
+}
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+// ::-webkit-scrollbar {
+//     width: 8px;
+//     height: 8px;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background-color: #d5d5d5;
+// }
+// ::-webkit-scrollbar-track{
+//     box-shadow: inset 0px 0px 2px rgba(200,200,200,1);
+// }
+
+// ::-webkit-scrollbar-track-piece{
+//     background-color: #e5e5e5;
+// }
+// ::-webkit-scrollbar{
+//     display: none;
+// }
+::selection {
+    background-color: $brandcolor;
+    color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $font16;
+    line-height: $lineheight20;
+    font-weight: $Regular;
+    font-family: $primaryfont;
+}
+
+table td,
+table th {
+    font-family: $primaryfont;
+}
+
+a {
+    text-decoration: none;
+    color: $brandcolor;
+    font-family: $primaryfont!important;
+    &:hover {
+        text-decoration: none;
+        color: $brandcolor;
+    }
+}
+ul,
+ol,
+dl {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+b,
+strong,
+i,
+em {
+    color: $branddark;
+    font-family: $primaryfont!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-family: $primaryfont!important;
+}
+
+.fa, .far, .fas{
+    font-family: 'FontAwesome'!important;
+}
+
+/**** Font Weight Css ****/
+
+.heading-centered {
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    font-size: 2.5rem!important;
+    font-weight: 600!important;
+    line-height: 2.9rem!important;
+    font-kerning: auto;
+    text-transform: capitalize;
+    @include responsivemax(767.9) {
+        font-size: 2rem!important;
+        line-height: 35px!important;
+    }
+    @include responsivemax(575.9) {
+        font-size: 1.8rem!important;
+        line-height: 35px!important;
+    }
+}
+
+
+.content-head{
+    .regular-text-dark,.regular-text-light,.regular-text-white{
+        font-size: 1.25rem;
+    }
+}
+
+.content-subheading{
+    font-size: 1.6rem!important;
+    font-weight: 500!important;
+    color: $branddark;
+    line-height: 28px!important;
+    @include responsivemax(575.9) {
+        font-size: 1.2rem!important;
+    } 
+}
+
+.custom-link {
+    span {
+        position: relative;
+        padding-bottom: 2px;
+        color: $brandcolor;
+        font-weight: 500;
+        font-size: 1.1rem;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $brandcolor;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    img {
+        max-width: 22px;
+    }
+}
+
+.regular-text-dark {
+    color: $branddark;
+    font-size: 1.02rem;
+    line-height: $textlineheight;
+    @include responsivemax(1199.9) {
+        font-size: 1rem;
+    }
+}
+.regular-text-light {
+    color: $brandlight;
+    font-size: 1.02rem;
+    line-height: $textlineheight;
+    @include responsivemax(1199.9) {
+        font-size: 1rem;
+    }
+}
+
+.regular-text-white {
+    color: $white;
+    font-size: 1.02rem;
+    line-height: $textlineheight;
+    @include responsivemax(1199.9) {
+        font-size: 1rem;
+    }
+}
+
+.box-title {
+    font-size: 1.2rem!important;
+    font-weight: 600!important;
+    color: $branddark;
+    line-height: 2.5rem;
+    text-transform: capitalize;
+    @include responsivemax(575.9) {
+        font-size: 1rem!important;
+    }
+}
+
+
+// ------------
+
+/**** Color Css ****/
+.brand-color {
+    color: $brandcolor;
+}
+.brand-green {
+    color: $brandgreen;
+}
+.brand-purple {
+    color: $brandpurple;
+}
+.brand-yellow {
+    color: $brandyellow;
+}
+.brand-yellowlight {
+    color: $brandyellowlight;
+}
+.brand-blue {
+    color: $brandblue;
+}
+.brand-pink {
+    color: $brandpink;
+}
+.brand-red {
+    color: $brandred;
+}
+.brand-dark {
+    color: $branddark;
+}
+.brand-light {
+    color: $brandlight;
+}
+
+/**** Background Color Css ****/
+.brand-bg {
+    background-color: $brandcolor;
+}
+.bg-brand-green {
+    background-color: $brandgreen;
+}
+.bg-brand-purple {
+    background-color: $brandpurple;
+}
+.bg-brand-yellow {
+    background-color: $brandyellow;
+}
+.bg-brand-blue {
+    background-color: $brandblue;
+}
+.brand-pink {
+    background-color: $brandpink;
+}
+.brand-red {
+    background-color: $brandred;
+}
+
+.font-w-100 {
+    font-weight: $Thin!important;
+}
+.font-w-200 {
+    font-weight: $ExtraLight!important;
+}
+.font-w-300 {
+    font-weight: $Light!important;
+}
+.font-w-400 {
+    font-weight: $Regular!important;
+}
+.font-w-500 {
+    font-weight: $Medium!important;
+}
+.font-w-600 {
+    font-weight: $SemiBold!important;
+}
+.font-w-700 {
+    font-weight: $bold!important;
+}
+.font-w-800 {
+    font-weight: $ExtraBold!important;
+}
+.font-w-900 {
+    font-weight: $Black!important;
+}
+.bold {
+    font-weight: $bold!important;
+}
+.normal {
+    font-weight: $Regular!important;
+}
+
+/**** Font Size Css ****/
+.font-10 {
+    font-size: $font10;
+}
+.font-11 {
+    font-size: $font11;
+}
+.font-12 {
+    font-size: $font12;
+}
+.font-13 {
+    font-size: $font13;
+}
+.font-14 {
+    font-size: $font14;
+}
+.font-15 {
+    font-size: $font15;
+}
+.font-16 {
+    font-size: $font16;
+}
+.font-17 {
+    font-size: $font17;
+}
+.font-18 {
+    font-size: $font18;
+}
+.font-19 {
+    font-size: $font19;
+}
+.font-20 {
+    font-size: $font20;
+}
+.font-21 {
+    font-size: $font21;
+}
+.font-22 {
+    font-size: $font22;
+}
+.font-23 {
+    font-size: $font23;
+}
+.font-24 {
+    font-size: $font24;
+}
+.font-25 {
+    font-size: $font25;
+}
+.font-26 {
+    font-size: $font26;
+}
+.font-27 {
+    font-size: $font27;
+}
+.font-28 {
+    font-size: $font28;
+}
+.font-29 {
+    font-size: $font29;
+}
+.font-30 {
+    font-size: $font30;
+}
+.font-31 {
+    font-size: $font31;
+}
+.font-32 {
+    font-size: $font32;
+}
+.font-33 {
+    font-size: $font33;
+}
+.font-34 {
+    font-size: $font34;
+}
+.font-35 {
+    font-size: $font35;
+}
+.font-36 {
+    font-size: $font36;
+}
+.font-37 {
+    font-size: $font37;
+}
+.font-38 {
+    font-size: $font38;
+}
+.font-39 {
+    font-size: $font39;
+}
+.font-40 {
+    font-size: $font40;
+}
+.font-41 {
+    font-size: $font41;
+}
+.font-42 {
+    font-size: $font42;
+}
+.font-43 {
+    font-size: $font43;
+}
+.font-44 {
+    font-size: $font44;
+}
+.font-45 {
+    font-size: $font45;
+}
+.font-46 {
+    font-size: $font46;
+}
+.font-47 {
+    font-size: $font47;
+}
+.font-48 {
+    font-size: $font48;
+}
+.font-49 {
+    font-size: $font49;
+}
+.font-50 {
+    font-size: $font50;
+}
+
+/**** Heading Css ****/
+h1.title {
+    font-size: $font45;
+    line-height: $lineheight53;
+
+}
+h2.title {
+    font-size: $font32;
+    line-height: $lineheight40;
+}
+h3.title {
+    font-size: $font26;
+    line-height: $lineheight34;
+}
+h4.title {
+    font-size: $font22;
+    line-height: $lineheight30;
+}
+h5.title {
+    font-size: $font19;
+    line-height: $lineheight27;
+}
+h6.title {
+    font-size: $font17;
+    line-height: $lineheight25;
+}
+
+/**** Border Radius Css ****/
+.border-radius0 {
+    border-radius: $borderradius0;
+}
+.border-radius5 {
+    border-radius: $borderradius5;
+}
+.border-radius10 {
+    border-radius: $borderradius10;
+}
+.border-radius15 {
+    border-radius: $borderradius15;
+}
+.border-radius20 {
+    border-radius: $borderradius20;
+}
+.border-radius25 {
+    border-radius: $borderradius25;
+}
+.border-radius30 {
+    border-radius: $borderradius30;
+}
+.border-radius35 {
+    border-radius: $borderradius35;
+}
+.border-radius40 {
+    border-radius: $borderradius40;
+}
+.border-radius45 {
+    border-radius: $borderradius45;
+}
+.border-radius50 {
+    border-radius: $borderradius50;
+}
+.border-radius100 {
+    border-radius: $borderradius100;
+}
+
+/**** Width Css ****/
+.w-100 {
+    width: $fullwidth;
+}
+.w-50 {
+    width: $halfwidth;
+}
+.w-33 {
+    width: $triwidth;
+}
+.w-25 {
+    width: $quartwidth;
+}
+.w-20 {
+    width: $pentawidth;
+}
+.w-vw {
+    width: $VWwidth;
+}
+
+/**** Width Css ****/
+.h-100 {
+    width: $fullheight;
+}
+.h-50 {
+    width: $halfheight;
+}
+.h-33 {
+    width: $triheight;
+}
+.h-25 {
+    width: $quartheight;
+}
+.h-20 {
+    width: $pentaheight;
+}
+.h-vh {
+    width: $VHheight;
+}
+
+// OPACITY Css
+.opacity-0 {
+    opacity: $opacity0;
+}
+.opacity-05 {
+    opacity: $opacity05;
+}
+.opacity-10 {
+    opacity: $opacity10;
+}
+.opacity-15 {
+    opacity: $opacity15;
+}
+.opacity-20 {
+    opacity: $opacity20;
+}
+.opacity-25 {
+    opacity: $opacity25;
+}
+.opacity-30 {
+    opacity: $opacity30;
+}
+.opacity-35 {
+    opacity: $opacity35;
+}
+.opacity-40 {
+    opacity: $opacity40;
+}
+.opacity-45 {
+    opacity: $opacity45;
+}
+.opacity-50 {
+    opacity: $opacity50;
+}
+.opacity-55 {
+    opacity: $opacity55;
+}
+.opacity-60 {
+    opacity: $opacity60;
+}
+.opacity-65 {
+    opacity: $opacity65;
+}
+.opacity-70 {
+    opacity: $opacity70;
+}
+.opacity-75 {
+    opacity: $opacity75;
+}
+.opacity-80 {
+    opacity: $opacity80;
+}
+.opacity-85 {
+    opacity: $opacity85;
+}
+.opacity-90 {
+    opacity: $opacity90;
+}
+
+// box-shadows
+.box-shadow-dark {
+    @include box-shadow($shadowdark);
+}
+.box-shadow-light {
+    @include box-shadow($shadowlight);
+}
+.box-shadow-green {
+    @include box-shadow($shadowgreen);
+}
+.box-shadow-red {
+    @include box-shadow($shadowred);
+}
+.box-shadow-yellow {
+    @include box-shadow($shadowyellow);
+}
+.box-shadow-blue {
+    @include box-shadow($shadowblue);
+}
+.box-shadow-purple {
+    @include box-shadow($shadowpurple);
+}
+
+//positions
+
+.static {
+    position: static;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+.sticky {
+    position: sticky;
+}
+
+// ---Content sections
+
+.contentSections {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: 100px;
+    @include responsivemax(767.9){
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+// - border type boxes
+
+.bottom-borderbox {
+    background: $white;
+    border-bottom: 5px solid $brandyellow;
+    min-height: 200px;
+    @include box-shadow($shadowdark);
+    border-radius: $primaryradius;
+}
+
+.borderleft-box {
+    background: rgba($color: $brandyellow, $alpha: 0.05);
+    border-left: 5px solid $brandyellow;
+    min-height: 200px;
+}
+
+.bottom-light-borderbox {
+    border-bottom: 3px solid #e4e4e4;
+    min-height: 200px;
+}
+
+.overlay-layer {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+}
+
+// ------ container width setting
+
+// .container {
+//     @include responsivemin(1366) {
+//         max-width: 1290px;
+//     }
+// }
+
+.rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+// ---------- material 
+.mat-calendar-body-cell-content.mat-focus-indicator{
+    background: $brandbluelight;
+}
+.mat-calendar-body-today, .mat-calendar-body-selected{
+    background: $brandcolor!important;
+    color: $white;
+    border: 0;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected){
+    border: 0;
+}
+
+.mat-calendar-table-header-divider::after{
+    background: transparent;
+}
+
+.mat-calendar-table-header th{
+    color: $branddark;
+    font-size: 14px;
+    font-weight: 600;
+}

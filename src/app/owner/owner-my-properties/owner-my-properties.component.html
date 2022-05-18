@@ -1,0 +1,353 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<div class="profile-banner listproperty-banner">
+    <div class="container py-5 relative">
+        <div class="row profile-head">
+            <div class="col-4">
+                <h4 class="content-subheading text-capitalize text-white mb-0">My Account</h4>
+            </div>
+            <div class="col-8">
+                <h4 class="content-subheading text-capitalize text-white text-right mb-0">Add new request</h4>
+            </div>
+        </div>
+
+        <div class="profile-section mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-options p-4">
+                        <div class="profile-image">
+                            <img src="assets/images/pictures/profile_1.jpg" class="img-fluid">
+                            <input type="file" class="chnageprofile" hidden id="userPofilepic"
+                                (change)="getProfilePic($event);">
+                            <button type="button" class="editprofile" data-file="userPofilepic"
+                                (click)="triggerFileInput($event)"><img src="assets/images/icons/pencil_white.png"
+                                    class="img-fluid" data-file="userPofilepic"></button>
+                        </div>
+                        <ul class="options mt-5 mb-3">
+                            <li><a routerLink="/owner-profile" class="d-flex align-items-center"><span
+                                        class="userico mr-3"></span> Profile</a></li>
+                            <li><a routerLink="/list-new-property" class="d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> List New Property</a></li>
+                            <li><a routerLink="/owner-my-properties" class="active d-flex align-items-center"><span
+                                        class="propertyico mr-3"></span> My Property</a></li>
+                            <li><a routerLink="/booking-request" class="d-flex align-items-center"><span
+                                        class="bokkingrequestico mr-3"></span> Booking Request</a></li>
+                            <li><a routerLink="" class="d-flex align-items-center"><span class="logoutico mr-3"></span>
+                                    Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <div class="profile-details list-new-property">
+                        <ul class="nav nav-tabs property-tabs p-4 border-0 align-items-center" id="myTab"
+                            role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="booked_prp" data-toggle="tab" href="#approvedProperty"
+                                    role="tab" aria-controls="home" aria-selected="true">Approved</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="my_prop" data-toggle="tab" href="#underVerification" role="tab"
+                                    aria-controls="profile" aria-selected="false">Under Verification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cancelled_prop" data-toggle="tab" href="#declinedProperty"
+                                    role="tab" aria-controls="contact" aria-selected="false">Declined</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cancelled_prop" data-toggle="tab" href="#bookedByRenter"
+                                    role="tab" aria-controls="contact" aria-selected="false">Booked By Renter</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-5 properties-wrp" id="myTabContent">
+                            <div class="tab-pane fade show active" id="approvedProperty" role="tabpanel"
+                                aria-labelledby="booked_prp">
+                                <!-- Booked property boxes -->
+                                <div class="property-showbox">
+                                    <a routerLink="/owner-approved-properties">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image"
+                                                    style="background-image: url(/assets/images/products/img_3.jpg);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4">
+                                                    <div class="label-head d-flex">
+                                                        <div class="blue-badge">Approved</div>
+                                                        <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                                class="fas fa-star brand-yellow ml-2"></i></p>
+                                                    </div>
+                                                    <div class="row pt-3">
+                                                        <div class="col-8">
+                                                            <h5 class="box-title mb-0">The lake view house, London, UK
+                                                            </h5>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                    class="font-13 text-lowercase">/ mo</small></h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                    <div class="features">
+                                                        <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                            <span>/</span>
+                                                            <strong>3</strong> Bathrooms
+                                                            <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+
+                                <div class="property-showbox">
+                                    <a routerLink="/owner-approved-properties">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image"
+                                                    style="background-image: url(/assets/images/products/img_3.jpg);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4">
+                                                    <div class="label-head d-flex">
+                                                        <div class="blue-badge">Approved</div>
+                                                        <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                                class="fas fa-star brand-yellow ml-2"></i></p>
+                                                    </div>
+                                                    <div class="row pt-3">
+                                                        <div class="col-8">
+                                                            <h5 class="box-title mb-0">The lake view house, London, UK
+                                                            </h5>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                    class="font-13 text-lowercase">/ mo</small></h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                    <div class="features">
+                                                        <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                            <span>/</span>
+                                                            <strong>3</strong> Bathrooms
+                                                            <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+                                <div class="property-showbox">
+                                    <div class="row">
+                                        <div class="col-md-4 px-5 d-flex align-items-center px-5 px-md-3">
+                                            <div class="property-image"
+                                                style="background-image: url(/assets/images/products/img_3.jpg);"></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="detail-box p-4">
+                                                <div class="label-head d-flex">
+                                                    <div class="blue-badge">Approved</div>
+                                                    <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                            class="fas fa-star brand-yellow ml-2"></i></p>
+                                                </div>
+                                                <div class="row pt-3">
+                                                    <div class="col-8">
+                                                        <h5 class="box-title mb-0">The lake view house, London, UK</h5>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                class="font-13 text-lowercase">/ mo</small></h5>
+                                                    </div>
+                                                </div>
+                                                <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                    Ipsum is not simply random text.</p>
+                                                <div class="features">
+                                                    <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                        <span>/</span>
+                                                        <strong>3</strong> Bathrooms
+                                                        <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Box close -->
+                            </div>
+                            <div class="tab-pane fade" id="underVerification" role="tabpanel" aria-labelledby="my_prop">
+                                <!-- Booked property boxes -->
+                                <div class="property-showbox">
+                                    <a routerLink="/property-under-verification">
+                                        <div class="row">
+                                            <div class="col-md-4 px-5 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image"
+                                                    style="background-image: url(/assets/images/products/img_2.jpg);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4">
+                                                    <div class="label-head d-flex">
+                                                        <div class="blue-badge">Waiting</div>
+                                                        <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                                class="fas fa-star brand-yellow ml-2"></i></p>
+                                                    </div>
+                                                    <div class="row pt-3">
+                                                        <div class="col-8">
+                                                            <h5 class="box-title mb-0">The lake view house, London, UK
+                                                            </h5>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                    class="font-13 text-lowercase">/ mo</small></h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                    <div class="features">
+                                                        <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                            <span>/</span>
+                                                            <strong>3</strong> Bathrooms
+                                                            <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+                                <div class="property-showbox">
+                                    <a href="/property-under-verification">
+                                        <div class="row">
+                                            <div class="col-md-4 px-5 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image"
+                                                    style="background-image: url(/assets/images/products/img_3.jpg);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4">
+                                                    <div class="label-head d-flex">
+                                                        <div class="blue-badge">Waiting</div>
+                                                        <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                                class="fas fa-star brand-yellow ml-2"></i></p>
+                                                    </div>
+                                                    <div class="row pt-3">
+                                                        <div class="col-8">
+                                                            <h5 class="box-title mb-0">The lake view house, London, UK
+                                                            </h5>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                    class="font-13 text-lowercase">/ mo</small></h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                    <div class="features">
+                                                        <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                            <span>/</span>
+                                                            <strong>3</strong> Bathrooms
+                                                            <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="declinedProperty" role="tabpanel"
+                                aria-labelledby="cancelled_prop">
+                                <!-- Booked property boxes -->
+                                <div class="property-showbox">
+                                    <a routerLink="/property-declined">
+                                        <div class="row">
+                                            <div class="col-md-4 px-5 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image"
+                                                    style="background-image: url(/assets/images/products/img_3.jpg);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4">
+                                                    <div class="label-head d-flex">
+                                                        <div class="blue-badge">Declined</div>
+                                                        <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                                class="fas fa-star brand-yellow ml-2"></i></p>
+                                                    </div>
+                                                    <div class="row pt-3">
+                                                        <div class="col-8">
+                                                            <h5 class="box-title mb-0">The lake view house, London, UK
+                                                            </h5>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                    class="font-13 text-lowercase">/ mo</small></h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                    <div class="features">
+                                                        <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                            <span>/</span>
+                                                            <strong>3</strong> Bathrooms
+                                                            <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+                            </div>
+                            <div class="tab-pane fade" id="bookedByRenter" role="tabpanel"
+                                aria-labelledby="cancelled_prop">
+                                <!-- Booked property boxes -->
+                                <div class="property-showbox">
+                                    <a routerLink="/property-booked-by-renter">
+                                        <div class="row">
+                                            <div class="col-md-4 px-5 d-flex align-items-center px-5 px-md-3">
+                                                <div class="property-image"
+                                                    style="background-image: url(/assets/images/products/img_3.jpg);">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="detail-box p-4">
+                                                    <div class="label-head d-flex">
+                                                        <div class="blue-badge">Booked</div>
+                                                        <p class="regular-text-light ml-auto mb-0">4.4 <i
+                                                                class="fas fa-star brand-yellow ml-2"></i></p>
+                                                    </div>
+                                                    <div class="row pt-3">
+                                                        <div class="col-8">
+                                                            <h5 class="box-title mb-0">The lake view house, London, UK
+                                                            </h5>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h5 class="box-title brand-color mb-0 text-right">1850<small
+                                                                    class="font-13 text-lowercase">/ mo</small></h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="regular-text-light mt-2">Contrary to popular belief, Lorem
+                                                        Ipsum is not simply random text.</p>
+                                                    <div class="features">
+                                                        <p class="regular-text-dark mb-0"><strong>5</strong> Bedrooms
+                                                            <span>/</span>
+                                                            <strong>3</strong> Bathrooms
+                                                            <span>/</span> <strong>1850</strong> sqft <span>/</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Box close -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

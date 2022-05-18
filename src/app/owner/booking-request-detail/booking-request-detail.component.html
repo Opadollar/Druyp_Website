@@ -1,0 +1,185 @@
+<app-header></app-header>
+<!-- ========= Header Close ========== -->
+
+<!-- ======== Content Sections ======= -->
+
+<section class="contentSections product-images-gallery">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-8">
+                <h4 class="content-subheading mb-0">Little white house 431 India St, London, UK</h4>
+                <p class="regular-text-dark mb-0 features mt-2">4 bd <span>/</span> 3 ba
+                    <span>/</span> 1470 sqft <span>/</span></p>
+            </div>
+            <div class="col-4">
+                <h4 class="content-subheading brand-color mb-0 text-right">1850 <small class="font-13 text-lowercase">/
+                        mo</small></h4>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="big_imgbox">
+                    <img src="assets/images/pictures/img_home_details.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Details -->
+        <div class="product-description py-4 mt-3">
+            <div class="row mb-3 align-items-center">
+                <div class="col-md-8 col-12">
+                    <h4 class="content-subheading">Property Details</h4>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="property-type py-3 px-3">
+                        <p class="regular-text-dark mb-0">Commercial</p>
+                    </div>
+                </div>
+            </div>
+            <p class="regular-text-dark">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                in
+                a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin
+                professor at Hampden-Sydney College in Virginia,</p>
+            <p class="regular-text-dark">looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
+                passage, and going through the cites of the word in classical literature, discovered the undoubtable
+                source.
+                Lorem Ipsum comes from sections 1.</p>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5 class="box-title font-w-500 mt-5 brand-color">Property Description</h5>
+                    <div class="d-flex renterdetails pt-2">
+                        <div class="imgcircle">
+                            <img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="details pl-3">
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Name:</span> Michelangelo Flores
+                            </p>
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Phone:</span> +1 444 2502 1234
+                            </p>
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Address:</span> 22 Baker Street,
+                                London, UK</p>
+                            <p class="font-18 font-w-300"><span class="font-w-500">ETA:</span> 31 July 2020, 06:30
+                                PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="box-title font-w-500 mt-5 brand-color">Furniture Supply Request & ETA</h5>
+                    <div class="d-flex renterdetails pt-2">
+                        <div class="imgcircle">
+                            <img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="details pl-3">
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Type:</span> Sofa</p>
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Category:</span> Silver</p>
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Address:</span> 22 Baker Street,
+                                London, UK</p>
+                            <p class="font-18 font-w-300"><span class="font-w-500">ETA:</span> 31 July 2020, 06:30
+                                PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="box-title font-w-500 mt-5 brand-color">Cleaning Request & ETA</h5>
+                    <div class="d-flex renterdetails pt-2">
+                        <div class="imgcircle">
+                            <img src="assets/images/pictures/profile.jpg" class="img-fluid">
+                        </div>
+                        <div class="details pl-3">
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">Type:</span> Sweeping</p>
+                            <p class="mb-2 font-18 font-w-300"><span class="font-w-500">ETA:</span> 22 Baker Street,
+                                London, UK</p>
+                            <p class="font-18 font-w-300"><span class="font-w-500">ETA:</span> 31 July 2020, 06:30
+                                PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Estimated Arrival Time -->
+        <div class="py-4">
+            <h4 class="content-subheading">Enter the day and time it occurred</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-calendar #calendar [(selected)]="selectedDate">
+                    </mat-calendar>
+                </div>
+                <div class="col-md-6 pl-md-5 mt-5 mt-md-0">
+                    <h4 class="content-subheading mb-4 text-center">Time Slot</h4>
+                    <div class="d-flex flex-wrap timeslots justify-content-center justify-content-md-end">
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>9:00 am</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>9:30 am</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>10:00 am</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>10:30 am</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>11:00 am</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>11:30 am</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>12:00 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>12:20 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>1:00 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>1:30 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>2:00 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>2:30 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>3:00 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>3:30 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>4:00 pm</label>
+                        </div>
+                        <div class="radiotype-btn">
+                            <input type="radio" class="customradio" name="timeslot">
+                            <label>4:30 pm</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-brandcolor px-md-5 d-block mx-auto">Confirm delivery/Installation</button>
+    </div>
+</section>
+<!-- Gallery section close -->

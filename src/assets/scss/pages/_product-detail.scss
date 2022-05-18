@@ -1,0 +1,138 @@
+.product-images-gallery{
+    .features{
+        span{
+            @include marginX(10px);
+            @include responsivemax(575.9){
+                @include marginX(5px);
+            }
+        }
+    }
+    .big_imgbox{
+        @include border-radius($primaryradius);
+    }
+    .timeslots{
+        .radiotype-btn{
+            margin-right: 15px;
+            margin-bottom: 25px;
+            min-width: 105px;
+            label{
+                padding: 15px 5px;
+            }
+        }
+    }
+}
+
+.servicebox{
+    @include border-radius($primaryradius);
+    @include transition(0.3s,ease-in);
+    @include box-shadow($shadowdark);
+    .serviceimg{
+        min-height: 350px;
+        @include flexcenter;
+    }
+}
+
+.purple_box{
+    background: #ebdef2;
+}
+
+.blue_box{
+    background: #c1e4fa;
+}
+
+.pink_box{
+    background: #f9e0dc;
+}
+
+.slivertag{
+    background: #e8e8e8;
+    padding: 3px 5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.goldtag{
+    background: #f7bd2d;
+    padding: 3px 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.addlable{
+    @include circle(25);
+    background: $brandcolor;
+    @include flexcenter;
+    padding-bottom: 1px;
+}
+
+.mapsection{
+    .btn-brandcolor{
+        width: 35%;
+        margin: auto;
+        display: block;
+        @include responsivemax(575.9){
+            width: 75%;
+        }
+    }
+    .mapwrp{
+        @include flexcenter;
+        .maplabel{
+            @include circle(80);
+            @include flexcenter;
+            position: absolute;
+            font-size: 1.5rem;
+            &::before {
+                content: "";
+                @include circle(80);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(235, 222, 242, 0.6);
+                position: absolute;
+                transform: scale(0);
+                @include animation(pulse, 2.5s, infinite);
+                animation-timing-function: cubic-bezier(1, 1, 1, 1);
+              }
+              &::after {
+                content: "";
+                @include circle(80);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(235, 222, 242, 0.6);
+                position: absolute;
+                transform: scale(0);
+                @include animation(pulse, 5s, infinite);
+                animation-timing-function: cubic-bezier(1, 1, 1, 1);
+              }
+              .maplabelinner{
+                @include circle(80);
+                overflow: hidden;
+                @include flexcenter;
+                background: $white;
+                font-size: 1.5rem;
+                position: relative;
+                z-index: 1;
+              }
+        }
+    }
+    
+}
+
+.slider_padding{
+    padding-left: 2.8rem;
+    @include responsivemax(767.9){
+        padding-left: 15px;
+    }
+}
+
+.addition-services{
+    .servicebox{
+        margin-bottom: 15px;
+    }
+}

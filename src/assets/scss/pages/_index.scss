@@ -1,0 +1,358 @@
+
+.homebanner-section{
+    background: $brandbluelight;
+    position: relative;
+    &::before{
+        content: "";
+        width: 8%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $white;
+        @include responsivemax(992.9){
+            display: none;
+        }
+    }
+    .banner-content{
+        position: relative;
+        min-height: 670px;
+        @include responsivemax(1199.9){
+            min-height: 560px;
+        }
+        @include responsivemax(767.9){
+            min-height: 385px;
+        }
+        .bannerimg-layer{
+            position: absolute;
+            right: 0;
+            top:0;  
+            img{
+                @include responsivemax(1199.9){
+                    max-width: 558px;
+                } 
+            } 
+        }
+        h1{
+            font-size: 2.5rem;
+            line-height: 3.2rem;
+            font-weight: 600;
+        }
+        .regular-text-dark{
+            font-size: 1.15rem;
+            word-spacing: 5px;
+        }
+    }
+}
+
+.herosearch-bar{
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    @include responsivemax(767.9){
+        position: relative;
+    }
+    .rightseperator{
+        @include responsivemax(767.9){
+           border: 0;
+        }
+    }
+    .colmob50{
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+.searhbarwrp{
+    min-height: 170px;
+    background: $white;
+    @include border-radius($primaryradius);
+    @include box-shadow($shadowdark);
+}
+
+.getchoice-section{
+    margin-top: 100px;
+    overflow-x: hidden;
+}
+
+.filterbox{
+    min-height: 170px;
+    position: relative;
+    .btnfilter{
+        font-size: 1.3rem;
+        // font-weight: 500;
+        display: block;
+        background: transparent;
+        width: 100%;
+        text-align: left;
+        padding: 0 10px;
+    }
+    .filterselect{
+        border: 0;
+        display: block;
+        background: transparent!important;
+        border: 0;
+        padding: 10px;
+        height: 55px;
+        font-size: 1.1rem;
+        color: $brandlight;
+        width: 100%;
+        text-align: left;
+        font-weight: 400;
+    }
+    .filtersearch{
+        background: $brandbluelight;
+        font-weight: 600;
+        color: $brandcolor;
+        height: 100%;
+        display: block;
+        width: 100%;
+        font-size: 1.5rem;
+        position: absolute;
+    }
+}
+
+.rightseperator{
+    position: relative;
+    &::before{
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        background: $brandlight;
+    }
+}
+
+.product-item{
+    @include border-radius($primaryradius);
+    @include transition(0.3s,ease-in);
+    .product-image{
+        height: 330px;
+        @include border-radius-topside($primaryradius);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .product-details{
+        background: $white;
+        position: relative;
+        @include border-radius-bottomside($primaryradius);
+        .namedetail{
+            .nametitle{
+                max-width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include transition(0.3s,ease-in);
+            }
+        }
+        .features{
+            p{
+                span{
+                    @include marginX(10px);
+                }
+            }
+        }
+    }
+    &:hover{
+        @include box-shadow($shadowdark);
+        .nametitle{
+            color: $brandcolor;
+        }
+    }
+}
+
+.gradient-overlay{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include square_otherval(100%);
+        background-image:  linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.00) 42%, rgba(255,255,255,1.00) 76%);
+        @include border-radius-bottomside($primaryradius);
+    }
+}
+
+.ourcustomers-section{
+    background: $brandbluelight;
+}
+
+.testimonial-box{
+    h5{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .customer_profile{
+        .customer-profile{
+            @include circle(65);
+            overflow: hidden;
+            @include box-shadow($shadowblue);
+        }
+    }
+}
+
+.testimonial-carousel{
+    position: relative;
+    .carousel-navigation{
+        button{
+            background: transparent;
+            border: 0;
+        }
+    }
+}
+
+// ------ circular slider -------
+
+.circular-slider{
+    @include flexcenter;
+    position: relative;
+    @include square_topx(630);
+    @include responsivemax(1199.9){
+        @include square_topx(480);
+    }
+    .outerlayer{
+        position: relative;
+        @include circle(550);
+        background: url(/assets/images/pictures/our_customer_circle_1.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .sublauer_1{
+        position: absolute;
+        @include circle(360);
+        background: url(/assets/images/pictures/our_customer_circle_2.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .innerlayer{
+        position: absolute;
+        @include circle(170);
+        background: url(/assets/images/pictures/our_customer_circle_2.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        @include flexcenter;
+        .active-customerimg{
+            @include circle(100);
+            @include box-shadow($shadowbluedark);
+            overflow: hidden;
+            border: 4px solid $white;
+            overflow: hidden;
+        }
+    }
+    .slideritem{
+        @include circle(60);
+        overflow: hidden;
+        @include flexcenter;
+        position: absolute;
+        @include box-shadow($shadowblue);
+    }
+    .item_1{
+        left: 125px;
+    }
+    .item_2{
+        right: 0px;
+        top: 130px;
+    }
+    .item_3{
+        bottom: -21px;
+        left: 230px;
+    }
+    .item_4{
+        top: 230px;
+        left: -21px;
+    }
+    .item_7{
+        top: -18px;
+        left: 183px;
+    }
+    .item_6{
+        bottom: 19px;
+        right: 40px;
+    }.item_5{
+        left: -24px;
+        bottom: 132px;
+    }
+}
+
+.appsection{
+    min-height: 917px;
+    position: relative;
+    @include responsivemax(992.9){
+        min-height: auto;
+    }
+    .appcontent{
+        min-height: 570px;
+        @include responsivemax(992.9){
+            min-height: auto;
+        }
+    }
+    .mockupslider{
+        position: absolute;
+        right: 0%;
+        top: 25%;
+        .phonelayer{
+            position: absolute;
+            top: -13px;
+            left: 34px;
+            max-width: 318px;
+            z-index: 1;
+            @include box-shadow($shadowdark);
+            border-radius: 44px;
+        }
+        .mocup-img{
+            margin-right: 30px;
+        }
+        .slick-active{
+            img{
+                margin-left: 75px;
+                margin-top: 60px;
+                @include responsivemax(1365.9){
+                    margin-left: 50px;
+                }
+            }
+        }
+        .slick-current{
+            img{
+                width: 290px;
+                border-radius: 25px;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+        .abouttoactive{
+            margin-left: 103px;
+        }
+    }
+}
+
+.slick-slider{
+    .leftarrow{
+        position: absolute;
+        top: -91px;
+        left: 73%;
+    }
+    .rightarrow{
+        position: absolute;
+        top: -95px;
+        right: 21%;
+    }
+}
+
+
+.appsection{
+    .slick-slider{
+        .leftarrow{
+            top: -126px;
+            left: 70%;
+        }
+        .rightarrow{
+            top: -130px;
+            right: 21%;
+        }
+    }
+}

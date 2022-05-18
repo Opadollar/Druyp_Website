@@ -1,0 +1,16 @@
+.recieved-order-detail{
+    .product-image{
+        min-height: 380px;
+        @include border-radius($primaryradius);
+        @include flexcenter;
+        background: #f4f3f1;
+    }
+    .footbtn{
+        button{
+            width: 40%;
+        }
+    }
+    .reasonbox{
+        @include border-radius($primaryradius);
+    }
+}

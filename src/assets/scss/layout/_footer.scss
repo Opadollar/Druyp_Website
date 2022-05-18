@@ -1,0 +1,21 @@
+.footer{
+    background: $brandcolor;
+    min-height: 100px;
+    ul{
+        li{
+            margin-bottom: 15px;
+        }
+    }
+    h5{
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    a{
+        font-size: 1rem;
+        color: $white;
+        &:hover,&:focus{
+            color: $white;
+        }
+    }
+}

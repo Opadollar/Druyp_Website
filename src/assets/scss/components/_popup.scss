@@ -1,0 +1,43 @@
+.style-popup{
+    .modal-dialog{
+        @include responsivemin(992){
+            max-width: 80%;
+        }
+    }
+    .modal-content{
+        border-radius: 20px;
+        position: relative;
+        .closemodal{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            opacity: 0.7;
+            z-index: 1;
+            img{
+                max-width: 18px;
+            }
+            &:hover,&:focus{
+                opacity: 1;
+                background: transparent;
+                border: 0;
+            }
+        }
+    }
+}
+
+.addphone-modal{
+    .modal-dialog{
+        @include responsivemin(992){
+            max-width: 530px;
+        }
+    }
+}
+
+.user-typemodal{
+    .modal-dialog{
+        @include responsivemin(992){
+            max-width: 450px;
+        }
+    }
+}
